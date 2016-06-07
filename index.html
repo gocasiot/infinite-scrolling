@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>ACT.md UI Engineer JavaScript Exercise</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+    <script src="app.js"></script>
+    
+</head>
+<body ng-app="myApp">
+    <div class="container" ng-controller="HomeCtrl">
+        <ul>
+            <li class="video-list" ng-repeat="video in videos" ng-click="openVideo(video.id.videoId)">
+                <img ng-src="{{ video.snippet.thumbnails.default.url }}"/> {{ video.snippet.title }}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
